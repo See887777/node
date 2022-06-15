@@ -253,11 +253,13 @@ exports[`test/lib/utils/config/definitions.js TAP > config description for auth-
 #### \`auth-type\`
 
 * Default: "legacy"
-* Type: "legacy", "sso", "saml", or "oauth"
-* DEPRECATED: This method of SSO/SAML/OAuth is deprecated and will be removed
-  in a future version of npm in favor of web-based login.
+* Type: "legacy", "webauthn", "sso", "saml", or "oauth"
+* DEPRECATED: The SSO/SAML/OAuth methods are deprecated and will be removed in
+  a future version of npm in favor of web-based login.
 
 What authentication strategy to use with \`adduser\`/\`login\`.
+
+Pass \`webauthn\` to use a web-based login.
 `
 
 exports[`test/lib/utils/config/definitions.js TAP > config description for before 1`] = `
@@ -1077,6 +1079,15 @@ exports[`test/lib/utils/config/definitions.js TAP > config description for locat
 * Type: "global", "user", or "project"
 
 When passed to \`npm config\` this refers to which config file to use.
+
+When set to "global" mode, packages are installed into the \`prefix\` folder
+instead of the current working directory. See
+[folders](/configuring-npm/folders) for more on the differences in behavior.
+
+* packages are installed into the \`{prefix}/lib/node_modules\` folder, instead
+  of the current working directory.
+* bin files are linked to \`{prefix}/bin\`
+* man pages are linked to \`{prefix}/share/man\`
 `
 
 exports[`test/lib/utils/config/definitions.js TAP > config description for lockfile-version 1`] = `

@@ -33,6 +33,7 @@ npm adduser
 
 Options:
 [--registry <registry>] [--scope <@scope>]
+[--auth-type <legacy|webauthn|sso|saml|oauth>]
 
 aliases: login, add-user
 
@@ -69,7 +70,7 @@ Run "npm help bin" for more info
 `
 
 exports[`test/lib/load-all-commands.js TAP load each command birthday > must match snapshot 1`] = `
-Birthday
+Birthday, deprecated
 
 Usage:
 npm birthday
@@ -113,7 +114,7 @@ Run "npm help cache" for more info
 `
 
 exports[`test/lib/load-all-commands.js TAP load each command ci > must match snapshot 1`] = `
-Install a project with a clean slate
+Clean install a project
 
 Usage:
 npm ci
@@ -396,7 +397,7 @@ npm init [<@scope>/]<name> (same as \`npx [<@scope>/]create-<name>\`)
 Options:
 [-y|--yes] [-f|--force]
 [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
-[-ws|--workspaces] [--include-workspace-root]
+[-ws|--workspaces] [--no-workspaces-update] [--include-workspace-root]
 
 aliases: create, innit
 
@@ -523,6 +524,7 @@ npm adduser
 
 Options:
 [--registry <registry>] [--scope <@scope>]
+[--auth-type <legacy|webauthn|sso|saml|oauth>]
 
 aliases: login, add-user
 
@@ -802,7 +804,7 @@ Run "npm help set" for more info
 `
 
 exports[`test/lib/load-all-commands.js TAP load each command set-script > must match snapshot 1`] = `
-Set tasks in the scripts section of package.json
+Set tasks in the scripts section of package.json, deprecated
 
 Usage:
 npm set-script [<script>] [<command>]

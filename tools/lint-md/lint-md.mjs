@@ -4935,7 +4935,6 @@ const htmlBlockNames = [
   'p',
   'param',
   'section',
-  'source',
   'summary',
   'table',
   'tbody',

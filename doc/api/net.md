@@ -25,7 +25,7 @@ sockets on other operating systems.
 
 ### Identifying paths for IPC connections
 
-[`net.connect()`][], [`net.createConnection()`][], [`server.listen()`][] and
+[`net.connect()`][], [`net.createConnection()`][], [`server.listen()`][], and
 [`socket.connect()`][] take a `path` parameter to identify IPC endpoints.
 
 On Unix, the local domain is also known as the Unix domain. The path is a
@@ -1092,7 +1092,7 @@ The numeric representation of the remote port. For example, `80` or `21`.
 ### `socket.resetAndDestroy()`
 
 <!-- YAML
-added: REPLACEME
+added: v18.3.0
 -->
 
 * Returns: {net.Socket}
